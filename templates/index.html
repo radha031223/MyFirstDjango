@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block title %}
+GroceryEase - Home
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0 mx-0" style=>
+    <div class="px-0" "mx-0">
+
+    <div class="hero" style="height: 800px;">
+        <!-- Hero content -->
+        <div class="overlay"></div>
+            <div class="hero-content">
+                <div id="hero-container" class="container">
+                    <div class="pt-3" "pb-3"> </div>
+                    <h1 class="display-4">Simplify Your Grocery Shopping</h1>
+                    {% comment %} <div class="pt-3" "pb-3"> </div> {% endcomment %}
+                    <p class="lead"> <b>Create, manage, and share your grocery lists effortlessly.</b> </p>
+                    <div class="pt-3" "pb-3"> </div>
+                </div>
+                <div class="pt-3" "pb-3"> </div>
+                <a href="{% url 'signup' %}" id="getstart" class="btn btn-primary btn-lg"><b>Get Started</b> </a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+ 
+<div class="pt-2">
+    <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+</div>
+
+<div class="features">
+    <h1 id="featureheading" align="center"> Features</h1>
+    <div class="pt-2"> </div>
+    <div class="d-flex flex-row">
+       
+            <div class="card ml-3 mr-3 flex-fill" id="firstfeature" style="width: 18rem;">
+                <img class="card-img-top" src="/static/feature5.jpg" alt="Card image cap" class="img-fluid" >
+                <div class="card-body">
+                    <h5 class="card-title">Effortless List Management</h5>
+                    <p class="card-text">Create, update, and manage your grocery lists effortlessly. Our intuitive interface allows you to quickly add items, set quantities, and organize your shopping list in a way that suits your needs.</p>
+                </div>
+            </div>
+            <div class="card mr-3 flex-fill" style="width: 18rem;">
+                <img class="card-img-top" src="/static/feature2.jpg" alt="Card image cap" class="img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">Easy Item Categorization</h5>
+                    <p class="card-text">Organize your grocery items with ease using our item categorization feature. Sort items by categories such as dairy, produce, and household goods, making it simpler to navigate your lists.</p>
+                </div>
+            </div>
+
+            <div class="card mr-3 flex-fill" style="width: 18rem;">
+                <img class="card-img-top" src="/static/feature3.jpg" alt="Card image cap" class="img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">Share Your List</h5>
+                    <p class="card-text">Collaborate effortlessly by sharing your grocery list with friends and family.</p>
+                </div>
+            </div>
+         
+     </div>  
+</div> 
+
+
+<div class="pt-2 pb-2">
+    <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+</div>
+
+
+<div id="faq-container" class="container-fluid" >
+    <div class="pt-2 pb-2">
+        <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+    </div>
+   
+  <div class="faq-section">
+    <div class="container">
+        <h2 style="margin-bottom: 20px;">Frequently Asked Questions</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link custom-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How do I create a grocery list?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Creating a grocery list is easy! Simply sign up, navigate to 'Create List,' and start adding items. You can categorize items for better organization.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link custom-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            How do I edit items on my grocery list?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        To edit items on your grocery list, simply click on the item you want to edit. You can then make changes to the item name, quantity, or category directly within the list.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link custom-btn" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            Is it possible to categorize items on my grocery list?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Absolutely! You can categorize items on your grocery list to keep things organized. Simply assign each item to a specific category such as "Produce," "Dairy," or "Frozen Foods" for easier shopping.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            How can I track the items I've already bought?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Our platform offers a convenient feature to track the items you've purchased. As you shop, simply mark items off your list as "purchased." These items will be automatically moved to a separate section or marked as completed, allowing you to focus on the remaining items. This feature helps you stay organized and ensures you don't overlook any essential items while shopping.
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards for additional questions -->
+        </div>
+    </div>
+</div>
+</div>
+<div class="pt-2 pb-2">
+    <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+</div> 
+
+
+<div id="cta-container" class="container-fluid ">
+    <div class="cta-section">
+        
+        <h2 style="margin: 5px;"> Get Started Today!</h2>
+        <div class="pt-1 pb-1">
+            <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+        </div> 
+        <a href="{% url 'signup' %}" class="btn btn-primary btn-lg" id="getstart">Sign Up</a>
+
+        {% comment %} <button href="{% url 'signup' %}" class="btn btn-primary btn-lg">Sign Up</button> {% endcomment %}
+    </div>
+</div>
+<script>
+  function toggleAnswer(id) {
+    var answer = document.getElementById(id);
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  }
+</script>
+
+{% endblock %}
+
+

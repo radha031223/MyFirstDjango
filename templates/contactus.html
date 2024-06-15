@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Contact Us {% endblock %}
+
+{% block content %}
+
+
+
+<div id="contact-container" class="container">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out to us through the form below.</p>
+    <!-- Contact form (can be left empty for this test) -->
+</div>
+<form method="post" action="/Contact-Us/">
+{% csrf_token %}
+<div id="form-container" class= "container">
+
+    <div class="mb-3">
+        <label for="name" class="form-label" style="font-weight: bold;">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name ">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label" style="font-weight: bold;">Contact No</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone number ">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label" style="font-weight: bold;">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email id ">
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label" style="font-weight: bold;">Write us here.</label>
+        <textarea class="form-control" id="desc" name="desc"rows="3" placeholder="Type a message. "></textarea >
+    </div>
+    <div class="mb-3">
+        <button type="submit" id="button" class="btn btn-black">Submit</button>
+    </div>
+</div>
+
+<div class="pt-2 pb-2">
+    <!-- Add padding top (pt-5) and padding bottom (pb-5) to create space -->
+</div> 
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+{% endblock %}
+  
